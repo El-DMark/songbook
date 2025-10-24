@@ -2,38 +2,52 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <script>
-    const jsonUrl = 'https://el-dmark.github.io/songbook/lyricsStream_dev.json';
+  <title>Song JSON</title>
+</head>
+<body>
+<script>
+  const jsonUrl = 'https://el-dmark.github.io/songbook/lyricsStream_dev.json';
 
-    async function serveSong() {
-      const params = new URLSearchParams(window.location.search);
-      let songId = params.get("id") || (window.location.hash.substring(1) || 1);
+  async function serveSong() {
+    let songId;
 
-      try {
-        const response = await fetch(jsonUrl);
-        const songsArray = await response.json();
-        const song = songsArray.find(s => s.songID == songId);
+    // 1. Try ?id=1
+    const params = new URLSearchParams(window.location.search);
+    songId = params.get("id");
 
-        // Clear the page and output only JSON
-        document.open();
-        document.write(JSON.stringify(song || { error: "Song not found" }));
-        document.close();
-
-        // Also set MIME type to JSON (works in most browsers)
-        const meta = document.createElement("meta");
-        meta.httpEquiv = "Content-Type";
-        meta.content = "application/json; charset=UTF-8";
-        document.head.appendChild(meta);
-
-      } catch (err) {
-        document.open();
-        document.write(JSON.stringify({ error: err.message }));
-        document.close();
+    // 2. If not found, try ?1 shorthand
+    if (!songId) {
+      const raw = window.location.search.substring(1); // e.g. "?1" → "1"
+      if (raw && !raw.includes("=")) {
+        songId = raw;
       }
     }
 
-    serveSong();
-  </script>
-</head>
-<body></body>
+    // 3. If still not found, try #1
+    if (!songId) {
+      songId = window.location.hash.substring(1);
+    }
+
+    // 4. Default fallback
+    if (!songId) {
+      songId = "1";
+    }
+
+    try {
+      const response = await fetch(jsonUrl);
+      const songsArray = await response.json();
+
+      // ✅ Use correct property name: "id"
+      const song = songsArray.find(s => String(s.id) === String(songId));
+
+      // Replace body with pretty JSON
+      document.body.textContent = JSON.stringify(song || { error: "Song not found" }, null, 2);
+    } catch (err) {
+      document.body.textContent = JSON.stringify({ error: err.message });
+    }
+  }
+
+  serveSong();
+</script>
+</body>
 </html>
