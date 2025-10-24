@@ -1,6 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Song Finder</title>
+</head>
+<body>
+  <h1>Find a Song</h1>
+  <p>Dynamic lookup using URL parameter or hash</p>
+  
+  <h2>Song Details:</h2>
+  <pre id="song-details">Loading...</pre>
+
+  <script>
+    // URL of your JSON file hosted on GitHub Pages
+    const jsonUrl = 'https://el-dmark.github.io/songbook/stream_dev.json';
+
+    async function getSongById(songId) {
+      try {
+        const response = await fetch(jsonUrl);
+        if (!response.ok) {
+          throw new Error(`Network response was not ok: ${response.statusText}`);
+        }
+        const songsArray = await response.json();
+        return songsArray.find(song => song.songID == songId);
+      } catch (error) {
+        console.error('Error fetching or finding song:', error);
+        return null;
+      }
+    }
+
+    (async () => {
+      // 1. Try to read from query string (?id=123)
+      const params = new URLSearchParams(window.location.search);
+      let songIdToFind = params.get("id");
+
+      // 2. If not found, try hash fragment (#123)
+      if (!songIdToFind && window.location.hash) {
+        songIdToFind = window.location.hash.substring(1);
+      }
+
+      // 3. Default fallback if nothing provided
+      if (!songIdToFind) {
+        songIdToFind = 1;
+      }
+
+      const song = await getSongById(songIdToFind);
+      const outputElement = document.getElementById('song-details');
+
+      if (song) {
+        outputElement.textContent = JSON.stringify(song, null, 2);
+      } else {
+        outputElement.textContent = `Song with ID ${songIdToFind} not found.`;
+      }
+    })();
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Song Finder</title>
