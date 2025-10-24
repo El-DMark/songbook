@@ -1,124 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Song Finder</title>
-</head>
-<body>
-  <h1>Find a Song</h1>
-  <p>Dynamic lookup using URL parameter or hash</p>
-  
-  <h2>Song Details:</h2>
-  <pre id="song-details">Loading...</pre>
-
   <script>
-    // URL of your JSON file hosted on GitHub Pages
     const jsonUrl = 'https://el-dmark.github.io/songbook/stream_dev.json';
 
-    async function getSongById(songId) {
+    async function serveSong() {
+      const params = new URLSearchParams(window.location.search);
+      let songId = params.get("id") || (window.location.hash.substring(1) || 1);
+
       try {
         const response = await fetch(jsonUrl);
-        if (!response.ok) {
-          throw new Error(`Network response was not ok: ${response.statusText}`);
-        }
         const songsArray = await response.json();
-        return songsArray.find(song => song.songID == songId);
-      } catch (error) {
-        console.error('Error fetching or finding song:', error);
-        return null;
+        const song = songsArray.find(s => s.songID == songId);
+
+        // Clear the page and output only JSON
+        document.open();
+        document.write(JSON.stringify(song || { error: "Song not found" }));
+        document.close();
+
+        // Also set MIME type to JSON (works in most browsers)
+        const meta = document.createElement("meta");
+        meta.httpEquiv = "Content-Type";
+        meta.content = "application/json; charset=UTF-8";
+        document.head.appendChild(meta);
+
+      } catch (err) {
+        document.open();
+        document.write(JSON.stringify({ error: err.message }));
+        document.close();
       }
     }
 
-    (async () => {
-      // 1. Try to read from query string (?id=123)
-      const params = new URLSearchParams(window.location.search);
-      let songIdToFind = params.get("id");
-
-      // 2. If not found, try hash fragment (#123)
-      if (!songIdToFind && window.location.hash) {
-        songIdToFind = window.location.hash.substring(1);
-      }
-
-      // 3. Default fallback if nothing provided
-      if (!songIdToFind) {
-        songIdToFind = 1;
-      }
-
-      const song = await getSongById(songIdToFind);
-      const outputElement = document.getElementById('song-details');
-
-      if (song) {
-        outputElement.textContent = JSON.stringify(song, null, 2);
-      } else {
-        outputElement.textContent = `Song with ID ${songIdToFind} not found.`;
-      }
-    })();
+    serveSong();
   </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Song Finder</title>
 </head>
-<body>
-    <h1>Find a Song</h1>
-    <p>Finding song with ID 1...</p>
-    
-    <h2>Song Details:</h2>
-    <pre id="song-details">Loading...</pre>
-
-    <script>
-        // 1. Set the URL to your published GitHub Pages JSON file
-        const jsonUrl = 'https://el-dmark.github.io/songbook/stream_dev.json';
-
-        // 2. Define an async function to fetch and find the song
-        async function getSongById(songId) {
-            try {
-                // Fetch the JSON file from the URL
-                const response = await fetch(jsonUrl);
-
-                // Check if the network request was successful
-                if (!response.ok) {
-                    throw new Error(`Network response was not ok: ${response.statusText}`);
-                }
-
-                // Parse the JSON text into a JavaScript array
-                const songsArray = await response.json();
-
-                // Use the .find() method to query the array
-                // This is the "query" part:
-                const foundSong = songsArray.find(song => song.songID === songId);
-
-                return foundSong; // Return the song object if found, or undefined if not
-
-            } catch (error) {
-                console.error('Error fetching or finding song:', error);
-                return null; // Return null on error
-            }
-        }
-
-        // 3. Call the function and display the results
-        
-        // We wrap the call in an IIFE (Immediately Invoked Function Expression)
-        // because we are using 'await' at the top level.
-        (async () => {
-            const songIdToFind = 1; // <-- Change this ID to find a different song
-            const song = await getSongById(songIdToFind);
-
-            const outputElement = document.getElementById('song-details');
-
-            if (song) {
-                // Display the found song object as a formatted string
-                outputElement.textContent = JSON.stringify(song, null, 2);
-            } else {
-                outputElement.textContent = `Song with ID ${songIdToFind} not found.`;
-            }
-        })();
-
-    </script>
-</body>
+<body></body>
 </html>
