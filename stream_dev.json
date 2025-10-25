@@ -331,7 +331,7 @@
     },
     {
         "songID": 34,
-        "title": "Baadal Par La Imaan",
+        "title": "Baadal par la eemaan",
         "artist": "Bro. Nischal Lal",
         "url": "https://drive.google.com/uc?export=download&id=1BxpA8giseW1Nm8GguzJ7MW-zO7KPDl2C",
         "albumArt": "https://www.endtimemessage.info/hoffman.jpg",
@@ -341,7 +341,7 @@
     },
     {
         "songID": 35,
-        "title": "Tera Fazal Kya Hi Ajeeb Mere Jeevan Mein",
+        "title": "Aapka fazal kya hi ajeeb",
         "artist": "Bro. Lal",
         "url": "https://drive.google.com/uc?export=download&id=1n3MhqxD20a5uaxZy6qzMOecedH_2t-fX",
         "albumArt": "https://i0.wp.com/endtimesmessages.com/wp-content/uploads/2019/03/The-Supernatural-Cloud-1963.jpg",
@@ -351,7 +351,7 @@
     },
     {
         "songID": 36,
-        "title": "Samay Ho Raha Hai Khatm Dulhan Ab Jaane Ko Hai",
+        "title": "Samay ho raha hai khatam",
         "artist": "Bro. Caleb Lal",
         "url": "https://drive.google.com/uc?export=download&id=1RH4bo32_Xfok2cT_LEzM3Ic9A0vicj8A",
         "albumArt": "https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg",
@@ -371,7 +371,7 @@
     },
     {
         "songID": 38,
-        "title": "Yahaan Ek Manushya Hai Jo Ujaala Kar Sakta Hai",
+        "title": "Yahaan ek manushye hain",
         "artist": "Bro. Israel Lazarus",
         "url": "https://drive.google.com/uc?export=download&id=1dIRGEtEXODX29UGJTrXElJend_OHLOpm",
         "albumArt": "https://www.endtimemessage.info/hoffman.jpg",
@@ -391,7 +391,7 @@
     },
     {
         "songID": 40,
-        "title": "Door Gagan Mein, Mere Watan Mein",
+        "title": "Door gagan mein mere vatan mein",
         "artist": "Bro. Noleen Benjamin",
         "url": "https://drive.google.com/uc?export=download&id=1MqHFYafTR77CxGN649PPz6voKJHl78YX",
         "albumArt": "https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg",
@@ -401,7 +401,7 @@
     },
     {
         "songID": 41,
-        "title": "Kya Tumne Socha Kyon Aisa Hota Prabhu",
+        "title": "Kya tumne socha kyon aisa hota",
         "artist": "Bro. Noleen Benjamin",
         "url": "https://drive.google.com/uc?export=download&id=1-8gXpE3ruPZ9Ckfc5S3KGKvvdp6In2kh",
         "albumArt": "https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg",
@@ -411,7 +411,7 @@
     },
     {
         "songID": 42,
-        "title": "Ek Baar Haan Saamarth Se Bhar De",
+        "title":"Ek baar aur saamarth se bhar dein Khuda",
         "artist": "Bro. Martin James",
         "url": "https://drive.google.com/uc?export=download&id=1jzWQM-VonBsyue9kecJbNx490sb3VqVR",
         "albumArt": "https://www.endtimemessage.info/hoffman.jpg",
@@ -491,7 +491,7 @@
     },
     {
         "songID": 50,
-        "title": "Tera Pyaar Hai Mahaan Tera Pyaar Hai Mahaan",
+        "title": "Aapka pyaar hai mahaan",
         "artist": "Bro. Lal",
         "url": "https://drive.google.com/uc?export=download&id=1n6Kj5NQ9Jz7LUO1bQkO8WalR3YXYF1JY",
         "albumArt": "https://www.endtimemessage.info/hoffman.jpg",
@@ -2350,4 +2350,3 @@
         "timestamp": "2025-10-22"
     }
 ]
-
