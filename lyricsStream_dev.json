@@ -425,7 +425,7 @@
     "verses": [
       "I hear the Saviour say,\n “Thy strength indeed is small,\n Child of weakness, watch and pray,\n Find in Me thine all in all.”\n ",
       "Lord, now indeed I find,\n Thy pow’r and Thine alone,\n Can change the leper’s spots,\n And melt the heart of stone.\n ",
-      "Since nothing good have I,\n Whereby Thy grace to claim,\n I’ll wash my garments white,\n In the blood of Calv’ry’s Lamb.\n "
+      "Since nothing good have I,\n Whereby Thy grace to claim,\n I’ll wash my garments white,\n In the blood of Calvary’s Lamb.\n "
     ],
     "chorus": "Jesus paid it all, All to Him I owe;\n Sin had left a crimson stain,\n He washed it white as snow.\n"
   },
@@ -673,24 +673,24 @@
     "id": 91,
     "name": "आसमा पे नजर आये",
     "verses": [
-      "आपका कानून भला है\n जो अक्ल देता है-    (3)\n हुक्म आपका है खरा जाम,\n करे बहाल खुदा-     (2)\n ",
-      "बचाना मुझको गुनाह से,\n आप पाक रखना सदा-  (3)\n आपकी आमद भी हो मुझमें\n आप फिर से खुदा-    (2)\n ",
-      "हुई रोशन ये जिन्दगी,\n आपके करम से खुदा-  (3)\n आपने जाहिर किया मुझपे,\n आप हैं कलाम-ए-खुदा- (2)\n ",
+      "आपका कानून भला है\n जो अक्ल देता है- (3)\n हुक्म आपका है खरा जाम,\n करे बहाल खुदा- (2)\n ",
+      "बचाना मुझको गुनाह से,\n आप पाक रखना सदा- (3)\n आपकी आमद भी हो मुझमें\n आप फिर से खुदा- (2)\n ",
+      "हुई रोशन ये जिन्दगी,\n आपके करम से खुदा- (3)\n आपने जाहिर किया मुझपे,\n आप हैं कलाम-ए-खुदा- (2)\n ",
       "मेरे राजा मेरे दूल्हा,\n आप मेरी जान खुदा\n वो जो कल थे,\n वो ही अब हैं, वो ही रहेंगे सदा\n "
     ],
     "chorus": "आसमा पे नजर आये\n आपका जलाल खुदा\n और जमीं पे\n आपके हाथों का कमाल खुदा\n",
     "title": "Aasmaan pe nazar aaye"
   },
   {
-        "songID": 92,
-        "title": "Above All",
-        "artist": "Bro. Rony Benjamin",
-        "url": "https://drive.google.com/uc?export=download&id=1VYIJ-Ypn8Re4fccA-pO5oWwBsBqgaNh-",
-        "albumArt": "https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg",
-        "lyrics": "Lyrics not available",
-        "Language": "English",
-        "timestamp": "2025-10-22"
-    },
+    "id": 92,
+    "name": "आये हैं हम आपके चरणों में",
+    "verses": [
+      "प्यारे मसीहा आशिष दें हमें,\n आत्मा से आप भर दें हमें.... (3)\n हल्लिलूय्याह... (4)\n ",
+      "हम बच्चे हैं परम पिता के,\n बढना हैं हमें वचनों में.... (3)\n हल्लिलूय्याह... (4)\n "
+    ],
+    "chorus": "आये हैं हम आपके चरणों में,\n लेकर हम, स्तुति...\n हल्लिलूय्याह...  (4)\n",
+    "title": "Aaye hain hum aapke charno mein"
+  },
   {
     "id": 93,
     "name": "आज बहुत सी आवाजों में",
@@ -788,6 +788,28 @@
     ],
     "chorus": "यीशु ने वादा किया है,\n लौट के फिर वह आयेंगे।\n उनकी ही है प्रतीक्षा,\n वो बादलों पे आयेंगे।\n",
     "title": "Yeshu ne vaada kiya hai"
+  },
+  {
+    "id": 104,
+    "name": "यीशु बिना, जीवन सूना हमारा",
+    "verses": [
+      "मसीह का किसी से बैर नहीं है,\n प्यार करो संदेश यही है।\n फजल हो मसीह था तो,\n जन्नत यही है,\n जन्नत की ख्वाहिश करो\n ",
+      "मसीहत में सीधी, चाल ही चलना,\n शैताँ की बातों से दूर ही रहना\n रहमत की उनमें कमी भी नही है\n रहमत की ख्वाहिश करो\n ",
+      "निराशा में जीवन छोड़ न देना,\n मसीहा का दामन कसके पकड़ना\n जीवन की डाली में फल भी होंगे,\n फल की ख्वाहिश करो।\n "
+    ],
+    "chorus": "यीशु बिना, जीवन सूना हमारा,\n उनकी सिताइश करो\n जीवन में उनका, आना है मुमकिन,\n थोड़ी सी ख्वाहिश करो\n",
+    "title": "Yeshu bina jeevan soona hamara"
+  },
+  {
+    "id": 105,
+    "name": "यहोवा की स्तुति करो",
+    "verses": [
+      "सामर्थ से पूरित आकाश में,\n उनकी स्तुति करो\n वास्ते पराक्रम के कामों के,\n उनकी स्तुति करो\n ",
+      "नरसिंगें फूंकते हुए,\n डफ को बजाते हुए\n सारंगी वीणा बजाकर,\n उनकी स्तुति करो\n ",
+      "तारवाले बाजे और झाँज को,\n आनंद के साथ बजाओ\n सारे जहान के प्राणी\n उनकी स्तुति करो\n "
+    ],
+    "chorus": "यहोवा की स्तुति करो...(2)\n उनके पवित्र स्थान में,\n यहोवा की स्तुति करो\n",
+    "title": "Yehova Ki Stuti Karo"
   }
 
 ]
