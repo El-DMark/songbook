@@ -37,6 +37,15 @@ function playSong(index) {
   const song = allSongs[index];
   const lyricsDisplay = document.getElementById('lyrics-display');
 
+  // --- Transform Google Drive link into preview link ---
+  let previewUrl = song.url;
+  if (previewUrl.includes('/view')) {
+    previewUrl = previewUrl.replace('/view', '/preview');
+  } else if (previewUrl.includes('uc?id=')) {
+    const fileId = new URL(previewUrl).searchParams.get('id');
+    previewUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+  }
+
   // Main lyrics + embedded Google Drive player
   lyricsDisplay.innerHTML = `
     <div class="player-box">
@@ -47,7 +56,7 @@ function playSong(index) {
       </div>
     </div>
     <iframe
-      src="${song.url.replace('/view', '/preview')}"
+      src="${previewUrl}"
       allow="autoplay"
       style="width:100%; height:80px; border:none; margin-top:1rem;"
     ></iframe>
@@ -60,7 +69,7 @@ function playSong(index) {
 
   // Update the Now Playing iframe
   const iframe = document.getElementById('np-iframe');
-  iframe.src = song.url.replace('/view', '/preview');
+  iframe.src = previewUrl;
 
   // Show the Now Playing bar
   document.getElementById('now-playing').style.display = 'flex';
