@@ -11,6 +11,7 @@ async function loadSongs() {
     console.error("Error loading songs:", err);
   }
 }
+
 function renderSongs(songs) {
   const songList = document.getElementById('song-list');
   const lyricsDisplay = document.getElementById('lyrics-display');
@@ -30,6 +31,7 @@ function renderSongs(songs) {
     songList.appendChild(item);
   });
 }
+
 function playSong(index) {
   currentIndex = index;
   const song = allSongs[index];
@@ -51,24 +53,19 @@ function playSong(index) {
     ></iframe>
   `;
 
-  // Update Now Playing bar (visual only — no audio control)
+  // Update Now Playing bar
   document.getElementById('np-art').src = song.albumArt;
   document.getElementById('np-title').textContent = song.title;
   document.getElementById('np-artist').textContent = song.artist;
 
-  // Remove audio logic — Google Drive handles playback
-  const audio = document.getElementById('np-audio');
-  audio.src = "";
-  audio.style.display = "none"; // optional: hide unused audio tag
+  // Update the Now Playing iframe
+  const iframe = document.getElementById('np-iframe');
+  iframe.src = song.url.replace('/view', '/preview');
 
+  // Show the Now Playing bar
   document.getElementById('now-playing').style.display = 'flex';
-  // Auto-advance
-  audio.onended = () => {
-    if (currentIndex < allSongs.length - 1) {
-      playSong(currentIndex + 1);
-    }
-  };
 }
+
 function nextSong() {
   if (currentIndex < allSongs.length - 1) {
     playSong(currentIndex + 1);
@@ -86,6 +83,7 @@ document.getElementById('search').addEventListener('input', (e) => {
   const filtered = allSongs.filter(song => song.title.toLowerCase().includes(query));
   renderSongs(filtered);
 });
+
 function toggleDarkMode() {
   document.body.classList.toggle('dark');
 }
