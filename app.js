@@ -30,7 +30,12 @@ function renderSongs(songs) {
     songList.appendChild(item);
   });
 }
-function playSong(song) {
+function playSong(index) {
+  currentIndex = index;
+  const song = allSongs[index];
+  const lyricsDisplay = document.getElementById('lyrics-display');
+
+  // Main lyrics + embedded Google Drive player
   lyricsDisplay.innerHTML = `
     <div class="player-box">
       <img src="${song.albumArt}" alt="Album Art">
@@ -46,16 +51,17 @@ function playSong(song) {
     ></iframe>
   `;
 
-  // Update Now Playing bar
+  // Update Now Playing bar (visual only — no audio control)
   document.getElementById('np-art').src = song.albumArt;
   document.getElementById('np-title').textContent = song.title;
   document.getElementById('np-artist').textContent = song.artist;
 
+  // Remove audio logic — Google Drive handles playback
   const audio = document.getElementById('np-audio');
-  audio.src = song.url;
-  audio.play();
-  document.getElementById('now-playing').style.display = 'flex';
+  audio.src = "";
+  audio.style.display = "none"; // optional: hide unused audio tag
 
+  document.getElementById('now-playing').style.display = 'flex';
   // Auto-advance
   audio.onended = () => {
     if (currentIndex < allSongs.length - 1) {
