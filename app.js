@@ -30,23 +30,21 @@ function renderSongs(songs) {
     songList.appendChild(item);
   });
 }
-function playSong(index) {
-  currentIndex = index;
-  const song = allSongs[index];
-  const lyricObj = allLyrics.find(l => l.id === song.songID);
-  const lyricsDisplay = document.getElementById('lyrics-display');
-
-  if (lyricObj) {
-    lyricsDisplay.innerHTML = `
-      <h2>${song.title}</h2>
-      <h4>by ${song.artist}</h4>
-      <pre>${lyricObj.verses.join("\n\n")}</pre>
-      <h3>Chorus</h3>
-      <pre>${lyricObj.chorus}</pre>
-    `;
-  } else {
-    lyricsDisplay.innerHTML = `<h2>${song.title}</h2><p>Lyrics not found.</p>`;
-  }
+function playSong(song) {
+  lyricsDisplay.innerHTML = `
+    <div class="player-box">
+      <img src="${song.albumArt}" alt="Album Art">
+      <div class="info">
+        <strong>${song.title}</strong><br>
+        <small>${song.artist}</small>
+      </div>
+    </div>
+    <iframe
+      src="${song.url.replace('/view', '/preview')}"
+      allow="autoplay"
+      style="width:100%; height:80px; border:none; margin-top:1rem;"
+    ></iframe>
+  `;
 
   // Update Now Playing bar
   document.getElementById('np-art').src = song.albumArt;
