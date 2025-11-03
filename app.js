@@ -53,7 +53,8 @@ function playSong(index) {
   }
 
   // 🎵 Show only lyrics in the main area
-  const lyricEntry = allLyrics.find(l => l.songID === song.songID);
+    const lyricEntry = allLyrics.find(l => l.songID === song.id);
+    
   lyricsDisplay.innerHTML = `
     <div class="lyrics-box">
       <h2>${song.title}</h2>
