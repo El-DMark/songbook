@@ -4,28 +4,33 @@
   <meta charset="UTF-8">
   <title>✝ Jesus Worship Songbook</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Link to CSS -->
+  <!-- Google Fonts for modern typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>✝ Jesus Worship Songbook</h1>
     <div class="controls">
-      <button class="toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+      <input type="text" id="search" placeholder="🔍 Search songs...">
+      <button class="toggle" onclick="toggleDarkMode()">🌙</button>
     </div>
   </header>
 
   <div class="container">
+    <!-- Sidebar -->
     <aside>
-      <input type="text" id="search" placeholder="Search songs...">
+      <h2>Song List</h2>
       <div id="song-list"></div>
     </aside>
+
+    <!-- Main Lyrics Display -->
     <main id="lyrics-display">
       <p>Select a song to view lyrics</p>
     </main>
   </div>
 
-  <!-- Now Playing bar -->
+  <!-- Now Playing Bar -->
   <div id="now-playing" style="display:none;">
     <div class="info">
       <img id="np-art" src="" alt="cover">
@@ -36,12 +41,11 @@
     </div>
     <div class="controls">
       <button onclick="prevSong()">⏮</button>
-      <iframe id="np-iframe" allow="autoplay" style="width:100%; height:80px; border:none;"></iframe>
+      <iframe id="np-iframe" allow="autoplay"></iframe>
       <button onclick="nextSong()">⏭</button>
     </div>
   </div>
 
-  <!-- Link to JS -->
   <script src="app.js"></script>
 </body>
 </html>
