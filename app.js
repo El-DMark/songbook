@@ -1,24 +1,24 @@
 let allSongs = [];
 let allLyrics = [];
-let activeSongs = [];   // 👈 new: the list currently being displayed
+let activeSongs = [];   // the list currently being displayed
 let currentIndex = -1;
 
 async function loadSongs() {
   try {
     allSongs = await fetch('stream_dev.json').then(res => res.json());
     allLyrics = await fetch('lyricsStream_dev.json').then(res => res.json());
-    renderSongs(allSongs);
+    renderSongs(allSongs); // start with full list
   } catch (err) {
     console.error("Error loading songs:", err);
   }
 }
 
 function renderSongs(songs) {
-  activeSongs = songs; // 👈 keep track of the current list
+  activeSongs = songs; // update active list
   const songList = document.getElementById('song-list');
   songList.innerHTML = "";
 
-  songs.forEach((song) => {
+  songs.forEach((song, index) => {
     const item = document.createElement('div');
     item.className = "song-item";
     item.innerHTML = `
@@ -28,22 +28,15 @@ function renderSongs(songs) {
         <small>${song.artist}</small>
       </div>
     `;
-    item.onclick = () => playSongByObject(song);
+    // use index from activeSongs
+    item.onclick = () => playSong(index);
     songList.appendChild(item);
   });
 }
 
-// Helper: play by object, then resolve index in active list
-function playSongByObject(song) {
-  currentIndex = activeSongs.findIndex(s => s.songID === song.songID);
-  if (currentIndex !== -1) {
-    playSong(currentIndex);
-  }
-}
-
 function playSong(index) {
   currentIndex = index;
-  const song = activeSongs[index]; // 👈 use activeSongs, not allSongs
+  const song = activeSongs[index]; // always from activeSongs
   const lyricsDisplay = document.getElementById('lyrics-display');
 
   // --- Transform Google Drive link into preview link ---
@@ -110,7 +103,7 @@ function prevSong() {
 document.getElementById('search').addEventListener('input', (e) => {
   const query = e.target.value.toLowerCase();
   const filtered = allSongs.filter(song => song.title.toLowerCase().includes(query));
-  renderSongs(filtered.length ? filtered : allSongs); // 👈 fallback to full list if empty
+  renderSongs(filtered.length ? filtered : allSongs);
 });
 
 function toggleDarkMode() {
