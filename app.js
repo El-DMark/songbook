@@ -52,14 +52,23 @@ function playSong(index) {
     console.error("Invalid song URL:", previewUrl, err);
   }
 
-  // 🎵 Show only lyrics in the main area
-    const lyricEntry = allLyrics.find(l => l.id === song.songID);
+  // 🎵 Match song.songID with lyric.id
+  const lyricEntry = allLyrics.find(l => l.id === song.songID);
 
+  // Build lyrics text (verses + chorus if available)
+  let lyricsText = "Lyrics not available";
+  if (lyricEntry) {
+    const verses = lyricEntry.verses ? lyricEntry.verses.join("\n\n") : "";
+    const chorus = lyricEntry.chorus ? `\n\nChorus:\n${lyricEntry.chorus}` : "";
+    lyricsText = verses + chorus;
+  }
+
+  // 🎵 Show lyrics only (no duplicate player here)
   lyricsDisplay.innerHTML = `
     <div class="lyrics-box">
       <h2>${song.title}</h2>
       <h4>${song.artist}</h4>
-      <pre>${lyricEntry ? lyricEntry.lyrics : "Lyrics not available"}</pre>
+      <pre>${lyricsText}</pre>
     </div>
   `;
 
