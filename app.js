@@ -1,20 +1,20 @@
 let allSongs = [];
 let allLyrics = [];
-let activeSongs = [];   // the list currently being displayed
+let activeSongs = [];
 let currentIndex = -1;
 
 async function loadSongs() {
   try {
     allSongs = await fetch('stream_dev.json').then(res => res.json());
     allLyrics = await fetch('lyricsStream_dev.json').then(res => res.json());
-    renderSongs(allSongs); // start with full list
+    renderSongs(allSongs);
   } catch (err) {
     console.error("Error loading songs:", err);
   }
 }
 
 function renderSongs(songs) {
-  activeSongs = songs; // update active list
+  activeSongs = songs;
   const songList = document.getElementById('song-list');
   songList.innerHTML = "";
 
@@ -28,7 +28,6 @@ function renderSongs(songs) {
         <small>${song.artist}</small>
       </div>
     `;
-    // use index from activeSongs
     item.onclick = () => playSong(index);
     songList.appendChild(item);
   });
@@ -36,10 +35,9 @@ function renderSongs(songs) {
 
 function playSong(index) {
   currentIndex = index;
-  const song = activeSongs[index]; // always from activeSongs
-  const lyricsDisplay = document.getElementById('lyrics-display');
+  const song = activeSongs[index];
 
-  // --- Transform Google Drive link into preview link ---
+  // Transform Google Drive link into preview link
   let previewUrl = song.url;
   try {
     if (previewUrl.includes('/view')) {
@@ -55,10 +53,9 @@ function playSong(index) {
     console.error("Invalid song URL:", previewUrl, err);
   }
 
-  // 🎵 Match song.songID with lyric.id
+  // Match song.songID with lyric.id
   const lyricEntry = allLyrics.find(l => l.id === song.songID);
 
-  // Build lyrics text (verses + chorus if available)
   let lyricsText = "Lyrics not available";
   if (lyricEntry) {
     const verses = lyricEntry.verses ? lyricEntry.verses.join("\n\n") : "";
@@ -66,25 +63,22 @@ function playSong(index) {
     lyricsText = verses + chorus;
   }
 
-  // 🎵 Show lyrics only
-  lyricsDisplay.innerHTML = `
+  // Update lyrics content
+  const lyricsContent = document.getElementById('lyrics-content');
+  lyricsContent.innerHTML = `
     <div class="lyrics-box">
       <h2>${song.title}</h2>
       <h4>${song.artist}</h4>
       <pre>${lyricsText}</pre>
     </div>
   `;
+  lyricsContent.classList.remove('hidden');
 
-  // 🎵 Update Now Playing bar with art + info
+  // Update Now Playing bar
   document.getElementById('np-art').src = song.albumArt;
   document.getElementById('np-title').textContent = song.title;
   document.getElementById('np-artist').textContent = song.artist;
-
-  // 🎵 Update the Now Playing iframe (the only player)
-  const iframe = document.getElementById('np-iframe');
-  iframe.src = previewUrl;
-
-  // Show the Now Playing bar
+  document.getElementById('np-iframe').src = previewUrl;
   document.getElementById('now-playing').style.display = 'flex';
 }
 
@@ -105,10 +99,6 @@ document.getElementById('search').addEventListener('input', (e) => {
   const filtered = allSongs.filter(song => song.title.toLowerCase().includes(query));
   renderSongs(filtered.length ? filtered : allSongs);
 });
-
-function toggleDarkMode() {
-  document.body.classList.toggle('dark');
-}
 
 // Sidebar toggle with overlay
 const menuBtn = document.getElementById('menu-toggle');
@@ -144,6 +134,5 @@ function toggleDarkMode() {
   const btn = document.querySelector('.toggle');
   btn.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
 }
-
 
 loadSongs();
