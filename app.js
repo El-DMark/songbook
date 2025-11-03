@@ -40,14 +40,11 @@ function playSong(index) {
   let previewUrl = song.url;
   try {
     if (previewUrl.includes('/view')) {
-      // Format: .../file/d/FILE_ID/view
       previewUrl = previewUrl.replace('/view', '/preview');
     } else if (previewUrl.includes('uc?id=')) {
-      // Format: ...uc?id=FILE_ID
       const fileId = new URL(previewUrl).searchParams.get('id');
       previewUrl = `https://drive.google.com/file/d/${fileId}/preview`;
     } else if (previewUrl.includes('uc?export=download&id=')) {
-      // Format: ...uc?export=download&id=FILE_ID
       const fileId = new URL(previewUrl).searchParams.get('id');
       previewUrl = `https://drive.google.com/file/d/${fileId}/preview`;
     }
@@ -55,7 +52,7 @@ function playSong(index) {
     console.error("Invalid song URL:", previewUrl, err);
   }
 
-  // 🎵 Show lyrics only (no duplicate player here)
+  // 🎵 Show only lyrics in the main area
   const lyricEntry = allLyrics.find(l => l.songID === song.songID);
   lyricsDisplay.innerHTML = `
     <div class="lyrics-box">
