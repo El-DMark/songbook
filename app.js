@@ -14,7 +14,6 @@ async function loadSongs() {
 
 function renderSongs(songs) {
   const songList = document.getElementById('song-list');
-  const lyricsDisplay = document.getElementById('lyrics-display');
   songList.innerHTML = "";
 
   songs.forEach((song, index) => {
@@ -39,7 +38,6 @@ function playSong(index) {
 
   // --- Transform Google Drive link into preview link ---
   let previewUrl = song.url;
-
   try {
     if (previewUrl.includes('/view')) {
       // Format: .../file/d/FILE_ID/view
@@ -57,28 +55,22 @@ function playSong(index) {
     console.error("Invalid song URL:", previewUrl, err);
   }
 
-  // Main lyrics + embedded Google Drive player
+  // 🎵 Show lyrics only (no duplicate player here)
+  const lyricEntry = allLyrics.find(l => l.songID === song.songID);
   lyricsDisplay.innerHTML = `
-    <div class="player-box">
-      <img src="${song.albumArt}" alt="Album Art">
-      <div class="info">
-        <strong>${song.title}</strong><br>
-        <small>${song.artist}</small>
-      </div>
+    <div class="lyrics-box">
+      <h2>${song.title}</h2>
+      <h4>${song.artist}</h4>
+      <pre>${lyricEntry ? lyricEntry.lyrics : "Lyrics not available"}</pre>
     </div>
-    <iframe
-      src="${previewUrl}"
-      allow="autoplay"
-      style="width:100%; height:80px; border:none; margin-top:1rem;"
-    ></iframe>
   `;
 
-  // Update Now Playing bar
+  // 🎵 Update Now Playing bar with art + info
   document.getElementById('np-art').src = song.albumArt;
   document.getElementById('np-title').textContent = song.title;
   document.getElementById('np-artist').textContent = song.artist;
 
-  // Update the Now Playing iframe
+  // 🎵 Update the Now Playing iframe (the only player)
   const iframe = document.getElementById('np-iframe');
   iframe.src = previewUrl;
 
