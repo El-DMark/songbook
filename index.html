@@ -18,13 +18,16 @@
   </header>
 
   <div class="container">
+    <!-- Sidebar -->
     <aside id="sidebar">
       <h2>Song List</h2>
       <div id="song-list"></div>
     </aside>
 
+    <!-- Overlay for mobile -->
     <div id="overlay"></div>
 
+    <!-- Main lyrics display -->
     <main>
       <div class="lyrics-header">
         <button id="toggle-lyrics">Hide Lyrics</button>
@@ -35,17 +38,25 @@
     </main>
   </div>
 
+  <!-- Now Playing Bar -->
   <div id="now-playing" style="display:none;">
     <div class="info">
       <img id="np-art" src="" alt="cover">
       <div>
-        <strong id="np-title"></strong><br>
-        <small id="np-artist"></small>
+        <strong id="np-title">Now Playing</strong><br>
+        <small id="np-artist">Artist</small>
       </div>
     </div>
     <div class="controls">
       <button onclick="prevSong()">⏮</button>
-      <iframe id="np-iframe" allow="autoplay"></iframe>
+      <iframe
+        id="np-iframe"
+        width="300"
+        height="60"
+        frameborder="0"
+        allow="autoplay"
+        style="border-radius: 6px;"
+      ></iframe>
       <button onclick="nextSong()">⏭</button>
     </div>
   </div>

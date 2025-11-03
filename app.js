@@ -63,22 +63,33 @@ function playSong(index) {
     lyricsText = verses + chorus;
   }
 
-  // Update lyrics content
+  // ✅ Update lyrics content
   const lyricsContent = document.getElementById('lyrics-content');
-  lyricsContent.innerHTML = `
-    <div class="lyrics-box">
-      <h2>${song.title}</h2>
-      <h4>${song.artist}</h4>
-      <pre>${lyricsText}</pre>
-    </div>
-  `;
-  lyricsContent.classList.remove('hidden');
+  if (lyricsContent) {
+    lyricsContent.innerHTML = `
+      <div class="lyrics-box">
+        <h2>${song.title}</h2>
+        <h4>${song.artist}</h4>
+        <pre>${lyricsText}</pre>
+      </div>
+    `;
+    lyricsContent.classList.remove('hidden');
+  } else {
+    console.warn("Missing #lyrics-content element in HTML.");
+  }
 
-  // Update Now Playing bar
+  // ✅ Update Now Playing bar
   document.getElementById('np-art').src = song.albumArt;
   document.getElementById('np-title').textContent = song.title;
   document.getElementById('np-artist').textContent = song.artist;
-  document.getElementById('np-iframe').src = previewUrl;
+
+  const iframe = document.getElementById('np-iframe');
+  if (iframe) {
+    iframe.src = previewUrl;
+  } else {
+    console.warn("Missing #np-iframe element in HTML.");
+  }
+
   document.getElementById('now-playing').style.display = 'flex';
 }
 
