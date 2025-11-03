@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <title>✝ Jesus Worship Songbook</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts for modern typography -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
+    <button id="menu-toggle" class="hamburger">☰</button>
     <h1>✝ Jesus Worship Songbook</h1>
     <div class="controls">
       <input type="text" id="search" placeholder="🔍 Search songs...">
@@ -18,19 +18,23 @@
   </header>
 
   <div class="container">
-    <!-- Sidebar -->
-    <aside>
+    <aside id="sidebar">
       <h2>Song List</h2>
       <div id="song-list"></div>
     </aside>
 
-    <!-- Main Lyrics Display -->
-    <main id="lyrics-display">
-      <p>Select a song to view lyrics</p>
+    <div id="overlay"></div>
+
+    <main>
+      <div class="lyrics-header">
+        <button id="toggle-lyrics">Hide Lyrics</button>
+      </div>
+      <div id="lyrics-content">
+        <p>Select a song to view lyrics</p>
+      </div>
     </main>
   </div>
 
-  <!-- Now Playing Bar -->
   <div id="now-playing" style="display:none;">
     <div class="info">
       <img id="np-art" src="" alt="cover">

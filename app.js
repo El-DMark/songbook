@@ -110,4 +110,40 @@ function toggleDarkMode() {
   document.body.classList.toggle('dark');
 }
 
+// Sidebar toggle with overlay
+const menuBtn = document.getElementById('menu-toggle');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
+
+menuBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+  overlay.classList.toggle('show');
+});
+
+overlay.addEventListener('click', () => {
+  sidebar.classList.remove('open');
+  overlay.classList.remove('show');
+});
+
+// Toggle lyrics visibility with animation
+document.getElementById('toggle-lyrics').addEventListener('click', () => {
+  const content = document.getElementById('lyrics-content');
+  const btn = document.getElementById('toggle-lyrics');
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    btn.textContent = 'Hide Lyrics';
+  } else {
+    content.classList.add('hidden');
+    btn.textContent = 'Show Lyrics';
+  }
+});
+
+// Light/Dark mode toggle
+function toggleDarkMode() {
+  document.body.classList.toggle('light');
+  const btn = document.querySelector('.toggle');
+  btn.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
+}
+
+
 loadSongs();
