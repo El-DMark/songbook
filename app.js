@@ -16,7 +16,7 @@ function renderSongs(songs) {
   const songList = document.getElementById('song-list');
   songList.innerHTML = "";
 
-  songs.forEach((song, index) => {
+  songs.forEach((song) => {
     const item = document.createElement('div');
     item.className = "song-item";
     item.innerHTML = `
@@ -26,9 +26,18 @@ function renderSongs(songs) {
         <small>${song.artist}</small>
       </div>
     `;
-    item.onclick = () => playSong(index);
+    // Pass the song object instead of index
+    item.onclick = () => playSongByObject(song);
     songList.appendChild(item);
   });
+}
+
+// Helper: play by object, then resolve index in master list
+function playSongByObject(song) {
+  currentIndex = allSongs.findIndex(s => s.songID === song.songID);
+  if (currentIndex !== -1) {
+    playSong(currentIndex);
+  }
 }
 
 function playSong(index) {
@@ -63,7 +72,7 @@ function playSong(index) {
     lyricsText = verses + chorus;
   }
 
-  // 🎵 Show lyrics only (no duplicate player here)
+  // 🎵 Show lyrics only
   lyricsDisplay.innerHTML = `
     <div class="lyrics-box">
       <h2>${song.title}</h2>
