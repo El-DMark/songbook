@@ -1,5 +1,6 @@
 let allSongs = [];
 let allLyrics = [];
+let activeSongs = [];   // 👈 new: the list currently being displayed
 let currentIndex = -1;
 
 async function loadSongs() {
@@ -13,6 +14,7 @@ async function loadSongs() {
 }
 
 function renderSongs(songs) {
+  activeSongs = songs; // 👈 keep track of the current list
   const songList = document.getElementById('song-list');
   songList.innerHTML = "";
 
@@ -26,15 +28,14 @@ function renderSongs(songs) {
         <small>${song.artist}</small>
       </div>
     `;
-    // Pass the song object instead of index
     item.onclick = () => playSongByObject(song);
     songList.appendChild(item);
   });
 }
 
-// Helper: play by object, then resolve index in master list
+// Helper: play by object, then resolve index in active list
 function playSongByObject(song) {
-  currentIndex = allSongs.findIndex(s => s.songID === song.songID);
+  currentIndex = activeSongs.findIndex(s => s.songID === song.songID);
   if (currentIndex !== -1) {
     playSong(currentIndex);
   }
@@ -42,7 +43,7 @@ function playSongByObject(song) {
 
 function playSong(index) {
   currentIndex = index;
-  const song = allSongs[index];
+  const song = activeSongs[index]; // 👈 use activeSongs, not allSongs
   const lyricsDisplay = document.getElementById('lyrics-display');
 
   // --- Transform Google Drive link into preview link ---
@@ -95,7 +96,7 @@ function playSong(index) {
 }
 
 function nextSong() {
-  if (currentIndex < allSongs.length - 1) {
+  if (currentIndex < activeSongs.length - 1) {
     playSong(currentIndex + 1);
   }
 }
@@ -109,7 +110,7 @@ function prevSong() {
 document.getElementById('search').addEventListener('input', (e) => {
   const query = e.target.value.toLowerCase();
   const filtered = allSongs.filter(song => song.title.toLowerCase().includes(query));
-  renderSongs(filtered);
+  renderSongs(filtered.length ? filtered : allSongs); // 👈 fallback to full list if empty
 });
 
 function toggleDarkMode() {
