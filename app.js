@@ -39,11 +39,22 @@ function playSong(index) {
 
   // --- Transform Google Drive link into preview link ---
   let previewUrl = song.url;
-  if (previewUrl.includes('/view')) {
-    previewUrl = previewUrl.replace('/view', '/preview');
-  } else if (previewUrl.includes('uc?id=')) {
-    const fileId = new URL(previewUrl).searchParams.get('id');
-    previewUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+
+  try {
+    if (previewUrl.includes('/view')) {
+      // Format: .../file/d/FILE_ID/view
+      previewUrl = previewUrl.replace('/view', '/preview');
+    } else if (previewUrl.includes('uc?id=')) {
+      // Format: ...uc?id=FILE_ID
+      const fileId = new URL(previewUrl).searchParams.get('id');
+      previewUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+    } else if (previewUrl.includes('uc?export=download&id=')) {
+      // Format: ...uc?export=download&id=FILE_ID
+      const fileId = new URL(previewUrl).searchParams.get('id');
+      previewUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+    }
+  } catch (err) {
+    console.error("Invalid song URL:", previewUrl, err);
   }
 
   // Main lyrics + embedded Google Drive player
