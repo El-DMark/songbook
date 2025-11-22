@@ -3,63 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <title>✝ Songs of Bride</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <button id="menu-toggle" class="hamburger">☰</button>
-    <h1>✝ Songs of Bride</h1>
-    <div class="controls">
-      <input type="text" id="search" placeholder="🔍 Search songs...">
-      <button class="toggle" onclick="toggleDarkMode()">🌙</button>
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="brand">
+      <span class="logo">✝</span>
+      <h1>Songs of Bride</h1>
+    </div>
+    <div class="header-actions">
+      <div class="searchbar">
+        <input type="text" id="search" placeholder="Search songs, artists...">
+      </div>
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+      <button id="view-toggle" class="icon-btn" aria-label="Toggle view">🔲</button>
+      <button id="menu-toggle" class="icon-btn" aria-label="Toggle menu">☰</button>
     </div>
   </header>
 
-  <div class="container">
-    <!-- Sidebar -->
-    <aside id="sidebar">
-      <h2>Song List</h2>
-      <div id="song-list"></div>
+  <!-- Layout -->
+  <div class="layout">
+
+    <!-- Sidebar list -->
+    <aside id="sidebar" class="sidebar">
+      <h2>Song list</h2>
+      <div id="song-list" class="song-list"></div>
     </aside>
 
     <!-- Overlay for mobile -->
-    <div id="overlay"></div>
+    <div id="overlay" class="overlay"></div>
 
-    <!-- Main lyrics display -->
-    <main>
-      <div class="lyrics-header">
-        <button id="toggle-lyrics">Hide Lyrics</button>
-      </div>
-      <div id="lyrics-content">
-        <p>Select a song to view lyrics</p>
-      </div>
+    <!-- Main content -->
+    <main class="main">
+      <!-- Tiles grid -->
+      <section id="tiles" class="tiles-grid"></section>
+
+      <!-- Lyrics panel -->
+      <section class="lyrics-panel">
+        <div class="lyrics-header">
+          <div class="title-group">
+            <img id="lyr-art" src="" alt="" class="cover-sm" />
+            <div>
+              <h3 id="lyr-title">Select a song</h3>
+              <p id="lyr-artist" class="muted">Lyrics will appear here</p>
+            </div>
+          </div>
+          <button id="toggle-lyrics" class="pill-btn">Hide lyrics</button>
+        </div>
+        <div id="lyrics-content" class="lyrics-content">
+          <p class="muted">Choose a track to see lyrics.</p>
+        </div>
+      </section>
     </main>
   </div>
 
-  <!-- Now Playing Bar -->
-  <div id="now-playing" style="display:none;">
-    <div class="info">
-      <img id="np-art" src="" alt="cover">
-      <div>
-        <strong id="np-title">Now Playing</strong><br>
-        <small id="np-artist">Artist</small>
+  <!-- Now Playing -->
+  <footer id="now-playing" class="now-playing hidden">
+    <div class="np-info">
+      <img id="np-art" src="" alt="cover" class="cover" />
+      <div class="np-meta">
+        <strong id="np-title">Now playing</strong>
+        <small id="np-artist" class="muted">Artist</small>
       </div>
     </div>
-    <div class="controls">
-      <button onclick="prevSong()">⏮</button>
-      <iframe
-        id="np-iframe"
-        width="300"
-        height="60"
-        frameborder="0"
-        allow="autoplay"
-        style="border-radius: 6px;"
-      ></iframe>
-      <button onclick="nextSong()">⏭</button>
+    <div class="np-controls">
+      <button class="icon-btn lg" id="prev-btn" aria-label="Previous">⏮</button>
+      <iframe id="np-iframe" width="320" height="60" frameborder="0" allow="autoplay"></iframe>
+      <button class="icon-btn lg" id="next-btn" aria-label="Next">⏭</button>
     </div>
-  </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>
