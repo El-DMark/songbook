@@ -172,7 +172,7 @@ body {
 .pill-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(17,194,106,0.25); }
 
 .lyrics-content {
-  max-height: 48vh; overflow: auto; position: relative;
+  max-height: 48vh; overflow: auto; position: center;
 }
 .lyrics-content p, .lyrics-content pre {
   white-space: pre-wrap; line-height: 1.7; font-size: 1.05rem;
