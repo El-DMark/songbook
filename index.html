@@ -20,38 +20,43 @@
       </div>
       <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
       <button id="view-toggle" class="icon-btn" aria-label="Toggle view">🔲</button>
-      <button id="menu-toggle" class="icon-btn" aria-label="Toggle menu">☰</button>
+      <button id="menu-toggle" class="icon-btn" aria-label="Open menu">☰</button>
     </div>
   </header>
 
-  <!-- Layout -->
-  <div class="layout">
+  <!-- Overlay -->
+  <div id="overlay" class="overlay"></div>
 
-    <!-- Sidebar list -->
-    <aside id="sidebar" class="sidebar">
+  <!-- Sidebar list -->
+  <aside id="sidebar" class="sidebar" aria-label="Song list">
+    <div class="sidebar-header">
       <h2>Song list</h2>
-      <div id="song-list" class="song-list"></div>
-    </aside>
+      <button id="close-sidebar" class="icon-btn" aria-label="Close menu">✕</button>
+    </div>
+    <div id="song-list" class="song-list"></div>
+  </aside>
 
-    <!-- Overlay for mobile -->
-    <div id="overlay" class="overlay"></div>
-
+  <!-- Layout -->
+  <div class="layout" id="layout">
     <!-- Main content -->
     <main class="main">
       <!-- Tiles grid -->
       <section id="tiles" class="tiles-grid"></section>
 
       <!-- Lyrics panel -->
-      <section class="lyrics-panel">
+      <section class="lyrics-panel" id="lyrics-panel">
         <div class="lyrics-header">
           <div class="title-group">
             <img id="lyr-art" src="" alt="" class="cover-sm" />
-            <div>
+            <div class="title-text">
               <h3 id="lyr-title">Select a song</h3>
               <p id="lyr-artist" class="muted">Lyrics will appear here</p>
             </div>
           </div>
-          <button id="toggle-lyrics" class="pill-btn">Hide lyrics</button>
+          <div class="lyrics-actions">
+            <button id="toggle-lyrics" class="pill-btn">Hide lyrics</button>
+            <button id="show-now-playing" class="pill-btn mobile-only">Now Playing</button>
+          </div>
         </div>
         <div id="lyrics-content" class="lyrics-content">
           <p class="muted">Choose a track to see lyrics.</p>
@@ -60,21 +65,50 @@
     </main>
   </div>
 
-  <!-- Now Playing -->
+  <!-- Now Playing (footer on desktop/tablet, full screen panel on mobile) -->
   <footer id="now-playing" class="now-playing hidden">
-    <div class="np-info">
-      <img id="np-art" src="" alt="cover" class="cover" />
-      <div class="np-meta">
-        <strong id="np-title">Now playing</strong>
-        <small id="np-artist" class="muted">Artist</small>
+    <div class="np-left">
+      <div class="np-info">
+        <img id="np-art" src="" alt="cover" class="cover" />
+        <div class="np-meta">
+          <strong id="np-title">Now playing</strong>
+          <small id="np-artist" class="muted">Artist</small>
+        </div>
       </div>
     </div>
-    <div class="np-controls">
-      <button class="icon-btn lg" id="prev-btn" aria-label="Previous">⏮</button>
-      <iframe id="np-iframe" width="320" height="60" frameborder="0" allow="autoplay"></iframe>
-      <button class="icon-btn lg" id="next-btn" aria-label="Next">⏭</button>
+
+    <div class="np-center">
+      <div class="np-player">
+        <button class="icon-btn lg" id="prev-btn" aria-label="Previous">⏮</button>
+        <iframe id="np-iframe" width="320" height="60" frameborder="0" allow="autoplay"></iframe>
+        <button class="icon-btn lg" id="next-btn" aria-label="Next">⏭</button>
+      </div>
+    </div>
+
+    <div class="np-right">
+      <button id="toggle-now-panel" class="icon-btn" aria-label="Toggle now-playing panel">⬆︎</button>
     </div>
   </footer>
+
+  <!-- Full-screen Now Playing panel for mobile with toggle to lyrics -->
+  <section id="now-panel" class="now-panel">
+    <div class="now-panel-header">
+      <button id="close-now-panel" class="icon-btn" aria-label="Close panel">✕</button>
+      <div class="now-panel-title">
+        <strong id="np2-title">Now playing</strong>
+        <small id="np2-artist" class="muted">Artist</small>
+      </div>
+      <button id="switch-to-lyrics" class="pill-btn" aria-label="Show lyrics">Lyrics</button>
+    </div>
+    <div class="now-panel-body">
+      <img id="np2-art" class="now-panel-cover" src="" alt="Album art">
+      <div class="np-player stacked">
+        <button class="icon-btn lg" id="prev-btn-2" aria-label="Previous">⏮</button>
+        <iframe id="np-iframe-2" width="100%" height="60" frameborder="0" allow="autoplay"></iframe>
+        <button class="icon-btn lg" id="next-btn-2" aria-label="Next">⏭</button>
+      </div>
+    </div>
+  </section>
 
   <script src="app.js"></script>
 </body>

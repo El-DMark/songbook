@@ -3,12 +3,18 @@ let allLyrics = [];
 let activeSongs = [];
 let currentIndex = -1;
 let tilesView = true;
+let isMobile = false;
 
-// Boot
 document.addEventListener('DOMContentLoaded', () => {
   wireControls();
+  updateIsMobile();
+  window.addEventListener('resize', updateIsMobile);
   loadData();
 });
+
+function updateIsMobile() {
+  isMobile = window.matchMedia('(max-width: 900px)').matches;
+}
 
 function wireControls() {
   const themeToggle = document.getElementById('theme-toggle');
@@ -16,8 +22,14 @@ function wireControls() {
   const menuBtn = document.getElementById('menu-toggle');
   const sidebar = document.getElementById('sidebar');
   const overlay = document.getElementById('overlay');
+  const closeSidebar = document.getElementById('close-sidebar');
   const search = document.getElementById('search');
   const toggleLyricsBtn = document.getElementById('toggle-lyrics');
+  const showNowPlayingBtn = document.getElementById('show-now-playing');
+  const toggleNowPanelBtn = document.getElementById('toggle-now-panel');
+  const nowPanel = document.getElementById('now-panel');
+  const closeNowPanelBtn = document.getElementById('close-now-panel');
+  const switchToLyricsBtn = document.getElementById('switch-to-lyrics');
 
   // Theme
   themeToggle.addEventListener('click', () => {
@@ -32,15 +44,18 @@ function wireControls() {
     viewToggle.textContent = tilesView ? '🔲' : '📃';
   });
 
-  // Sidebar (mobile)
+  // Sidebar open/close
   menuBtn.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-    overlay.classList.toggle('show');
+    sidebar.classList.add('open');
+    overlay.classList.add('show');
   });
-  overlay.addEventListener('click', () => {
+  closeSidebar.addEventListener('click', closeSidebarDrawer);
+  overlay.addEventListener('click', closeSidebarDrawer);
+
+  function closeSidebarDrawer() {
     sidebar.classList.remove('open');
     overlay.classList.remove('show');
-  });
+  }
 
   // Search
   search.addEventListener('input', (e) => {
@@ -55,19 +70,40 @@ function wireControls() {
   // Lyrics hide/show
   toggleLyricsBtn.addEventListener('click', () => {
     const content = document.getElementById('lyrics-content');
-    const btn = document.getElementById('toggle-lyrics');
     const isHidden = content.classList.toggle('hidden');
-    btn.textContent = isHidden ? 'Show lyrics' : 'Hide lyrics';
+    toggleLyricsBtn.textContent = isHidden ? 'Show lyrics' : 'Hide lyrics';
   });
 
-  // Now playing controls
+  // Footer controls
   document.getElementById('prev-btn').addEventListener('click', prevSong);
   document.getElementById('next-btn').addEventListener('click', nextSong);
+
+  // Mobile: show full-screen now playing
+  if (showNowPlayingBtn) {
+    showNowPlayingBtn.addEventListener('click', () => {
+      if (!isMobile) return;
+      nowPanel.classList.add('show');
+    });
+  }
+  toggleNowPanelBtn.addEventListener('click', () => {
+    if (!isMobile) return;
+    nowPanel.classList.add('show');
+  });
+  closeNowPanelBtn.addEventListener('click', () => nowPanel.classList.remove('show'));
+  switchToLyricsBtn.addEventListener('click', () => {
+    nowPanel.classList.remove('show');
+    // Smooth scroll to lyrics
+    const lp = document.getElementById('lyrics-panel');
+    lp?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // Mobile stacked controls
+  document.getElementById('prev-btn-2').addEventListener('click', prevSong);
+  document.getElementById('next-btn-2').addEventListener('click', nextSong);
 }
 
 async function loadData() {
   try {
-    // Uses your existing JSON endpoints
     const [songsRes, lyricsRes] = await Promise.all([
       fetch('stream_dev.json'),
       fetch('lyricsStream_dev.json')
@@ -107,7 +143,7 @@ function renderTiles(songs) {
         <div class="tile-artist">${escapeHtml(song.artist)}</div>
       </div>
     `;
-    card.addEventListener('click', () => playSong(i));
+    card.addEventListener('click', () => selectAndPlay(i));
     grid.appendChild(card);
   });
 }
@@ -117,7 +153,6 @@ function renderList(songs) {
   if (!list) return;
 
   list.innerHTML = '';
-  // Show sidebar on desktop, mobile toggle via button
   songs.forEach((song, i) => {
     const item = document.createElement('div');
     item.className = 'song-item';
@@ -129,13 +164,23 @@ function renderList(songs) {
       </div>
       <button class="icon-btn" aria-label="Play">▶</button>
     `;
-    item.addEventListener('click', () => playSong(i));
+    item.addEventListener('click', () => selectAndPlay(i));
     if (i === currentIndex) item.classList.add('active');
     list.appendChild(item);
   });
 }
 
 /* ---------- Playback + Lyrics ---------- */
+
+function selectAndPlay(index) {
+  playSong(index);
+  // Mobile: after selecting, show now playing full-screen
+  if (isMobile) {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('overlay').classList.remove('show');
+    document.getElementById('now-panel').classList.add('show');
+  }
+}
 
 function playSong(index) {
   currentIndex = index;
@@ -165,13 +210,19 @@ function playSong(index) {
   lyrContent.innerHTML = `<pre>${escapeHtml(lyricsText)}</pre>`;
   lyrContent.classList.remove('hidden');
 
-  // Now Playing bar
+  // Footer Now Playing bar
   document.getElementById('np-art').src = sanitize(song.albumArt);
   document.getElementById('np-title').textContent = song.title;
   document.getElementById('np-artist').textContent = song.artist;
-
   const iframe = document.getElementById('np-iframe');
   iframe.src = previewUrl;
+
+  // Full-screen Now Playing (mobile)
+  document.getElementById('np2-art').src = sanitize(song.albumArt);
+  document.getElementById('np2-title').textContent = song.title;
+  document.getElementById('np2-artist').textContent = song.artist;
+  const iframe2 = document.getElementById('np-iframe-2');
+  iframe2.src = previewUrl;
 
   const np = document.getElementById('now-playing');
   np.classList.remove('hidden');
@@ -211,7 +262,6 @@ function toDrivePreview(url) {
 }
 
 function sanitize(src) {
-  // basic guard for empty or invalid src
   return src || '';
 }
 
