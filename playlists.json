@@ -1,0 +1,26 @@
+{
+  "playlists": [
+    {
+      "id": 1,
+      "name": "Only Jesus",
+      "description": "Songs for My Lord GOD",
+      "coverArtUrl": "https://wallpaperaccess.com/full/475797.jpg",
+      "songs": [
+        1,
+        2,
+        3"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Morning Worship Mix",
+      "description": "Songs For Morning Worship",
+      "coverArtUrl": "https://wallpaperaccess.com/full/1439170.jpg",
+      "songs": [
+       4,
+        5,
+        6"
+      ]
+    }
+  ]
+}
