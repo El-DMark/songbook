@@ -206,25 +206,7 @@
         "url": "https://drive.google.com/uc?export=download&id=1RbprJQcfDLwmcQX0FFKY014OSWAaNqen",
         "albumArt": "https://raw.githubusercontent.com/El-DMark/songbook/fbd2f9153251000c7ffe64554938a6d8a5362694/CoverArt/21.png",
         "lyrics": "Lyrics not available",
-        "Language": "English",
-        "timestamp": "2025-10-22"
-    },
-    {
-        "songID": 22,
-        "title": "Yeshu Ke Lahu Ki Jai Jai",
-        "artist": "Bro. Lal",
-        "url": "https://drive.google.com/uc?export=download&id=1KkyxSX9u066pHfNeGeaXr7C7d6HMfsSe",
-        "albumArt": "https://www.endtimemessage.info/hoffman.jpg",
-        "lyrics": "Lyrics not available",
-        "Language": "Hindi",
-        "timestamp": "2025-10-22"
-    },
-    {
-        "songID": 23,
-        "title": "Yeshu Ne Calvary Dukh Kyon Seh Liya",
-        "artist": "Bro. Vimal Lal",
-        "url": "https://drive.google.com/uc?export=download&id=1xEL2rYAaVbi6GJ4LdWHbt573IzZWjPMH",
-        "albumArt": "https://raw.githubusercontent.com/El-DMark/songbook/55656a60951b69db94015d352dbc17c6b6305974/CoverArt/23.png",
+https://raw.githubusercontent.com/El-DMark/songbook/55656a60951b69db94015d352dbc17c6b6305974/CoverArt/23.png",
         "lyrics": "Lyrics not available",
         "Language": "Hindi",
         "timestamp": "2025-10-22"
@@ -266,7 +248,25 @@
         "url": "https://drive.google.com/uc?export=download&id=1a8xOjICoNrAzNdvHw_tC8DsSZJC5Wmek",
         "albumArt": "https://i0.wp.com/endtimesmessages.com/wp-content/uploads/2019/03/The-Supernatural-Cloud-1963.jpg",
         "lyrics": "Lyrics not available",
+        "Language": "H        "Language": "English",
+        "timestamp": "2025-10-22"
+    },
+    {
+        "songID": 22,
+        "title": "Yeshu Ke Lahu Ki Jai Jai",
+        "artist": "Bro. Lal",
+        "url": "https://drive.google.com/uc?export=download&id=1KkyxSX9u066pHfNeGeaXr7C7d6HMfsSe",
+        "albumArt": "https://www.endtimemessage.info/hoffman.jpg",
+        "lyrics": "Lyrics not available",
         "Language": "Hindi",
+        "timestamp": "2025-10-22"
+    },
+    {
+        "songID": 23,
+        "title": "Yeshu Ne Calvary Dukh Kyon Seh Liya",
+        "artist": "Bro. Vimal Lal",
+        "url": "https://raw.githubusercontent.com/El-DMark/songbook/b2a0d06a81ad20b113a4f471eced103efa274033/CoverArt/23.png",
+        "albumArt": "indi",
         "timestamp": "2025-10-22"
     },
     {
