@@ -2348,5 +2348,475 @@
         "lyrics": "Lyrics not available",
         "Language": "English",
         "timestamp": "2025-10-22"
+    },
+     {
+        "songID": 236,
+        "title": "AADI MEIN VACHAN THA",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/aadi-mein-vachan-tha.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/aadi-mein-vachan-tha.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 237,
+        "title": "AB WO DIN NIKAT HAI",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/ab-wo-din-nikat-hai.MP3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/ab-wo-din-nikat-hai.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 238,
+        "title": "AE SHAHO KE SHAHINSHAH",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/ae-shaho-ke-shahinshah.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/ae-shaho-ke-shahinshah.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 239,
+        "title": "APNI DULHAN KO LENE",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/apni-dulhan-ko-lene.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/apni-dulhan-ko-lene.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 240,
+        "title": "BADA DIN AAYA",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/bada-din-aaya.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/bada-din-aaya.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 241,
+        "title": "BHAJO MEETHA NAAM",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/bhajo-meetha-naam.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/bhajo-meetha-naam.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 242,
+        "title": "CHRIST YESHU DAYALU PRABHU",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/christ-yeshu-dayalu-prabhu.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/christ-yeshu-dayalu-prabhu.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 243,
+        "title": "DULHAN AB TO MAN DEEPAK ME",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/dulhan-ab-to-man-deepak-me.MP3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/dulhan-ab-to-man-deepak-me.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 244,
+        "title": "EK HI PRABHU",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/ek-hi-prabhu.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/ek-hi-prabhu.jpeg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 245,
+        "title": "ENGEEL KI YE DUNIA",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/engeel-ki-ye-dunia.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/engeel-ki-ye-dunia.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 246,
+        "title": "GARCHE GUNAHGAAR HOON",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/garche-gunahgaar-hoon.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/garche-gunahgaar-hoon.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 247,
+        "title": "GUNAHO KI VAADI MEIN CHAL KAR",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/gunaho-ki-vaadi-mein-chal-kar.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/gunaho-ki-vaadi-mein-chal-kar.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 248,
+        "title": "HAR EK AANKH USE DEKHEGI",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/har-ek-aankh-use-dekhegi.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/har-ek-aankh-use-dekhegi.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 249,
+        "title": "HATH PAKAD KAR MUJHKO CHALA",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/hath-pakad-kar-mujhko-chala.MP3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/hath-pakad-kar-mujhko-chala.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 250,
+        "title": "HE YESHU MERA HRIDAY",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/he-yeshu-mera-hriday.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/he-yeshu-mera-hriday.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 251,
+        "title": "HO SHUKRIYA KHUDA KA",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/ho-shukriya-khuda-ka.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/ho-shukriya-khuda-ka.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 252,
+        "title": "HUM TOH JALTE DEEP HAIN",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/hum-toh-jalte-deep-hain.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/hum-toh-jalte-deep-hain.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 253,
+        "title": "JAANCH TU MUJHE &  HE YESHU MERA HRIDAY",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/jaanch-tu-mujhe-he-yeshu-mera-hriday.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/jaanch-tu-mujhe-he-yeshu-mera-hriday.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 254,
+        "title": "JANAM PAANI SE LENA HOGA",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/janam-paani-se-lena-hoga.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/janam-paani-se-lena-hoga.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 255,
+        "title": "JIWAN HAI EK NAAV",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/jiwan-hai-ek-naav.MP3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/jiwan-hai-ek-naav.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 256,
+        "title": "KEWAL RAKH VISHWAAS",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/kewal-rakh-vishwaas.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/kewal-rakh-vishwaas.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 257,
+        "title": "KHOON KI NADIYAN BEHTI HAIN",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/khoon-ki-nadiyan-behti-hain.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/khoon-ki-nadiyan-behti-hain.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 258,
+        "title": "KISI KO JIWANDAAN",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/kisi-ko-jiwandaan.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/kisi-ko-jiwandaan.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 259,
+        "title": "MAIN BAHUT LACHAAR",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/main-bahut-lachaar.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/main-bahut-lachaar.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 260,
+        "title": "MAIN KYA KAHU KI KYA KYA",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/main-kya-kahu-ki-kya-kya.MP3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/main-kya-kahu-ki-kya-kya.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 261,
+        "title": "MHARAJA YESHU",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/mharaja-yeshu.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/mharaja-yeshu.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 262,
+        "title": "MUJHE RAAS AA GAYA HAI",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/mujhe-raas-aa-gaya-hai.MP3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/mujhe-raas-aa-gaya-hai.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 263,
+        "title": "PAVITRA MANA JAYE TERA NAAM",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/pavitra-mana-jaye-tera-naam.MP3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/pavitra-mana-jaye-tera-naam.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 264,
+        "title": "PRABHU KA ANAND",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/prabhu-ka-anand.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/prabhu-ka-anand.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 265,
+        "title": "PREM SE YESHU BULAYE JALDI AAO",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/prem-se-yeshu-bulaye-jaldi-aao.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/prem-se-yeshu-bulaye-jaldi-aao.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 266,
+        "title": "PYARA TERA NAAM",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/pyara-tera-naam.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/pyara-tera-naam.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 267,
+        "title": "PYARO HIMMAT BANDHO",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/pyaro-himmat-bandho.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/pyaro-himmat-bandho.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 268,
+        "title": "Sabse bada-Rony(2011-01-16) ",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/sabse-bada-rony2011-01-16.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/sabse-bada-rony2011-01-16.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 269,
+        "title": "SAMBHAAL YESHU JI",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/sambhaal-yeshu-ji.MP3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/sambhaal-yeshu-ji.jpeg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 270,
+        "title": "SARE AADAR AUR SAARI MAHIMA",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/sare-aadar-aur-saari-mahima.MP3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/sare-aadar-aur-saari-mahima.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 271,
+        "title": "SUNLO MERE BHAIYO MASIH MERA DUNIYA MEIN AAYA",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/sunlo-mere-bhaiyo-masih-mera-duniya-mein-aaya.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/sunlo-mere-bhaiyo-masih-mera-duniya-mein-aaya.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 272,
+        "title": "TAN MAN AUR DHAN USE DO",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/tan-man-aur-dhan-use-do.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/tan-man-aur-dhan-use-do.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 273,
+        "title": "TERE AANE KI KHUSHI KO MEIN",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/tere-aane-ki-khushi-ko-mein.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/tere-aane-ki-khushi-ko-mein.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 274,
+        "title": "TERE HUZOOR YESHU JI",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/tere-huzoor-yeshu-ji.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/tere-huzoor-yeshu-ji.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 275,
+        "title": "TUJH SA JAHAN",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/tujh-sa-jahan.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/tujh-sa-jahan.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 276,
+        "title": "UUTH GAYE HAIN KADAM HAMARE",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/uuth-gaye-hain-kadam-hamare.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/uuth-gaye-hain-kadam-hamare.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 277,
+        "title": "WAKIF NAHI YESHU SE",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/wakif-nahi-yeshu-se.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/wakif-nahi-yeshu-se.png",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 278,
+        "title": "YESHU KE LAHOO KI JAI",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/yeshu-ke-lahoo-ki-jai.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/yeshu-ke-lahoo-ki-jai.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 279,
+        "title": "YESHU NAAM UDHARA",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/yeshu-naam-udhara.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/yeshu-naam-udhara.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 280,
+        "title": "YESHU NE KALWARI DUKH KYU",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/yeshu-ne-kalwari-dukh-kyu.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/yeshu-ne-kalwari-dukh-kyu.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 281,
+        "title": "YESHU SALIB PAR MUA",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/yeshu-salib-par-mua.mp3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/yeshu-salib-par-mua.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
+    },
+    {
+        "songID": 282,
+        "title": "YESHU TUNE KIYA NIHAAL",
+        "artist": "Bro. Lal",
+        "url": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/audio/yeshu-tune-kiya-nihaal.MP3",
+        "albumArt": "https://tehillah-media-proxy.dev-mugenstack.workers.dev/images/covers/yeshu-tune-kiya-nihaal.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-09-30"
     }
 ]
