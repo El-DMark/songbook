@@ -3992,12 +3992,13 @@
     {
         "songID": 400,
         "title": "Stuti karo x 3 Yehowa k daso",
-        "artist": "Saint",
+        "artist": "Bro. Nischal Lal",
         "url": "https://cdn.tehillah.live/audio/stuti-karo-x-3-yehowa-k-daso.mp3",
         "albumArt": "https://cdn.tehillah.live/images/covers/stuti-karo-x-3-yehowa-k-daso.jpg",
         "lyrics": "false",
         "Language": "Hindi",
-        "timestamp": "2026-11-08"
+        "timestamp": "2026-11-08",
+        "published": true
     },
     {
         "songID": 401,
