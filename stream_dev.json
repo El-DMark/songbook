@@ -4393,12 +4393,13 @@
     {
         "songID": 440,
         "title": "When the Battle Is Over",
-        "artist": "Saint",
+        "artist": "Bro. Nischal Lal",
         "url": "https://cdn.tehillah.live/audio/when-the-battle-is-over12.mp3",
         "albumArt": "https://cdn.tehillah.live/images/covers/when-the-battle-is-over12.jpg",
         "lyrics": "false",
         "Language": "English",
-        "timestamp": "2026-11-08"
+        "timestamp": "2026-11-08",
+        "published": true
     },
     {
         "songID": 441,
