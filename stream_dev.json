@@ -4789,5 +4789,15 @@
         "lyrics": "false",
         "Language": "Hindi",
         "timestamp": "2026-11-09"
+    },
+    {
+        "songID": 480,
+        "title": "Mere Gunaa Ho Ka Bojh",
+        "artist": "Bro. Martin James",
+        "url": "https://cdn.tehillah.live/audio/mere-gunaa-ho-ka-bojh.webm",
+        "albumArt": "https://cdn.tehillah.live/images/covers/mere-gunaa-ho-ka-bojh.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-11-09"
     }
 ]
