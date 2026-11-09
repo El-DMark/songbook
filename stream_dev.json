@@ -4778,5 +4778,15 @@
         "lyrics": "false",
         "Language": "Hindi",
         "timestamp": "2026-11-09"
+    },
+    {
+        "songID": 479,
+        "title": "Pahaad Pe Kyaa Aakarshan Hai",
+        "artist": "Sis. Namarata",
+        "url": "https://cdn.tehillah.live/audio/pahaad-pe-kyaa-aakarshan-hai.webm",
+        "albumArt": "https://cdn.tehillah.live/images/covers/pahaad-pe-kyaa-aakarshan-hai.jpg",
+        "lyrics": "false",
+        "Language": "Hindi",
+        "timestamp": "2026-11-09"
     }
 ]
